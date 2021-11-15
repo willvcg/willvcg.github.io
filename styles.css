@@ -1,6 +1,42 @@
-h1{
-    font-size: 40px;
-    color: blue;
-    text-decoration: underline;
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/*Contenedor principal de toda la página*/
+#container{
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 14px rgba(225, 225, 226, 0.8);
+    height: auto;
+    min-height: 600px;
+}
+
+/*Header - Contenedor del logo y menu*/
+#header{
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+}
+
+/*Logo*/
+.logo{
+    text-transform: uppercase;
+    margin-left: 15px;
+    padding: 20px;
+    text-shadow: 0px 0px 2px #ccc;
+}
+
+.logo h1{
+    font-size: 35px;
     font-style: italic;
+    font-family: Helvetica;
+    font-weight: 800;
 }
