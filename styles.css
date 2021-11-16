@@ -167,7 +167,7 @@
     height: 120px;
     border-top: 1px solid #ccc;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 #footer .logo{
@@ -204,9 +204,10 @@
     /*Contenedor de la barra lateral y de los projects*/
     #content{
         display: flex;
-        flex-flow: column wrap;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        justify-content: space-between;
+        flex-flow: column ;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     /*Barra lateral*/
@@ -217,7 +218,6 @@
     #aside ul{
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
     }
 
     #aside ul li{
@@ -226,12 +226,9 @@
         margin-left: 5px;
     }
 
-    /*Projects*/
-    #projects{
-        display: flex;
-    }
-    
-    #project{
+    /*Projects*/  
+    .project{
+        flex-grow: 1;
         margin-right: 10px;
         margin-left: 10px;
     }
@@ -240,12 +237,17 @@
     /*Pie de página*/
     #footer .logo{
         flex-basis: 100%;
+        flex-grow: 1;
+        order: 1;
         text-align: center;
     }
 
     #footer .info{
         flex-basis: 100%;
+        flex-grow: 1;
+        order: 2;
         text-align: center;
         margin-left: 0px;
     }
 }
+
