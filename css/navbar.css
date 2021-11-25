@@ -5,6 +5,7 @@
     left: 0;
     top: 0;
     width: 100%;        /*Para que la barra de navegación nos ocupe todo el ancho de la pantalla*/
+    z-index: 100;       /*Cuando ponemos position fixed, tambien tenemos que poner z-index para que la imagen no se ponga encima del menu*/
 }
 
 .topnav{
