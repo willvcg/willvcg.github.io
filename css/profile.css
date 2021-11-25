@@ -1,0 +1,98 @@
+/*Esta es la segunda forma de importar una fuente de google
+En vez de copiar el link de la fuente y pegarlo en el head
+del index.html, copiamos el "@import" y lo pegamos en el css.*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans:wght@700&display=swap');
+
+.profile-info{
+    margin-bottom: 25px;
+}
+
+.profile-img{
+    width: 80%;
+    max-width: 300px;
+}
+
+.profile-img-section{
+    position: relative;     /*Me sirve para que la linea no se ponga encima de la imagen, solo se pueda poner debajo o fuera del esapacio de la imagen*/
+}
+
+.profile-img-line{
+    background-color: var(--secondary-color);
+    height: 15px;
+    position: absolute;         /*Nos sirve para fijar la linea en un sitio concreto en este caso debajo de la imagen.*/
+    width: 100%;
+    left: 0;                /*Quitamos espacio a la izquierda*/
+    bottom: 0;              /*Quitamos espacio a abajo*/
+}
+
+.profile{
+    text-align: center;
+}
+
+.profile-title{
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--primary-color);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.profile-details{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.profile-btn{
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    border: none;
+    font-size: 20px;
+    padding: 0.5em 1em;         /*El "em" significa un tamaño relativo al tamaño de fuente de la caja en la que se va a usar. Es decir 0.5em serian 10px y 1em serian 20px. El padding se adapta al tamaño de fuente.*/
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.profile-btn:hover{
+    filter: brightness(130%);
+}
+
+
+@media (min-width: 950px){
+    .profile-info{
+        margin-bottom: 0px;
+    }
+    
+    .profile-img{
+        width: 100%;
+        max-width: 350px;
+        transform: scaleX(-1);          /*Con esto hacemos que la imagen mira hacia el lado contrario.*/
+    }
+    
+    
+    .profile{
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        max-width: 980px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+    .profile-title{
+        font-size: 60px;
+    }
+    
+    .profile-details{
+        font-size: 25px;
+        margin: 30px 0;
+    }
+    
+    .profile-btn{
+        font-size: 28px;
+        padding: 0.5em 1em;         /*El "em" significa un tamaño relativo al tamaño de fuente de la caja en la que se va a usar. Es decir 0.5em serian 10px y 1em serian 20px. El padding se adapta al tamaño de fuente.*/
+    }
+    
+}

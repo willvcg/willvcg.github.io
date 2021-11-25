@@ -1,0 +1,46 @@
+/*Esto de root es como poner html
+Nos sirve para definir variables en css*/
+:root{
+    --theme-color:white;
+    --primary-color: #124f88;
+    --secondary-color: #f4c331;
+    --text-color-inverse: white;
+    --tet-color: black;
+    --navbar-shallow-color: #e5e5e5;
+    --menu-mobile-background-color: #3a4460;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--tet-color);
+    padding-top: 70px;      /*Esto se lo agregamos ya que si no no se veria el contenido que esta a continuación del la barra de navegación, porque tiene el fixed*/
+}
+
+a{
+    text-decoration: none;
+    color: var(--tet-color);
+}
+
+.horizontal-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 950px){
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    
+}

@@ -1,0 +1,121 @@
+.topheader{
+    position: fixed;
+    box-shadow: 0 4px 5px var(--navbar-shallow-color);
+    background-color: var(--theme-color);
+    left: 0;
+    top: 0;
+    width: 100%;        /*Para que la barra de navegación nos ocupe todo el ancho de la pantalla*/
+}
+
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px;       /*Con esto consigo que los elementos tengan una separación máxima.*/
+    margin: 0 auto;         /*Con esto digo que quiero 0 margenes en el eje Y, y un margen automatico en el eje X*/
+}
+
+/* LOGO */
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.logo img{
+    border-radius: 50%;
+}
+
+/* MENU */
+
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    padding: 0 15px;    /*En el eje Y 0px y en el eje X 15px*/
+}
+
+.menu a{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;             /*Se pone 50px, ya que la imagen mide 50px*/
+    text-transform: uppercase;
+}
+
+.open-menu,
+.close-menu{
+    display: none;          /*Con esto lo que hacemos es que los iconos de abrir y cerrar menú que no se vean en vista de escritorio*/
+}
+
+@media (max-width: 950px){    
+
+    /* MENU */
+
+    /*Con flex-direction cambio la direccion de los li a 
+    columnas, con el position fixed fijo los li a un solo
+    sitio, con left y con top quito todos los margenes que pudieran haber,
+    con el width 100% hago que la caja de menu ocupe
+    todo el ancho de la pantalla para después con el align items
+    center centrarlo en la página.*/
+    .menu{
+        flex-direction: column;
+        position:fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: var(--menu-mobile-background-color);
+        height: 100%;       /*Con esto consigo que el menu en responsive abar el 100% del alto de la pantalla*/
+        overflow-y: auto;   /*Esto nos sirve para que el menu tenga una barra scroll cuando le haga falta usarla por diemnsiones de la pantalla.*/
+
+        opacity: 0;         /*La opacidad por defecto tienen que ser 0, se tiene que ver el menu cuando demos click al icono hamburguesa*/
+        pointer-events: none;   /*Esto nos sirve para que aunque los botones del menu estan ocultos por opacity, no les podamos hacer click*/
+        transition: opacity 0.3s;
+    }
+
+    .menu li{
+        padding: 0 ;    /*En el eje Y 0px y en el eje X 15px*/
+    }
+
+    .menu a{
+        color: var(--text-color-inverse);       /*Es muy importante poner el color del texto en la etiqueta <a> ya que si ponemos color en la clase menu no funcionaría porque el color esta definido anteriormente en la etique <a>*/
+        line-height: 60px;             /*El line hight nos sirve para separar las líneas, esto lo usamos en vez de meter margin o padding a los <a>*/
+    }
+
+    .open-menu,
+    .close-menu{
+        display: block;          /*Con esto lo que hacemos es que los iconos de abrir y cerrar menú que no se vean en vista de escritorio*/
+        border: none;           /*border y background none se ponen ya que estos estilos vienen por defecto en la etiqueta boton, y simplemente las quitamos a estas propiedades.*/
+        background:none;
+        cursor: pointer;
+    }
+
+    .close-menu{
+        align-self: flex-end;       /*Esto nos sirve para alinear algún elemento de una forma diferente, ya antes ya usamos el align-items y nos alineo todos los elementos al centro.*/
+        padding: 20px 15px;
+    }
+
+    /*Cuando el menu esta abierto en reponsive, la opacity
+    es igual a 1, es decir se ve el menu, y el pointer events
+    esta activado para poder hacer click a los botones del menu*/
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    /*Esto nos sirve para que no nos muestre el borde exterior del
+    icono cuando le damos click con el raton, pero si que nos muestre 
+    el borde del icono cuando vamos con el tabulador*/
+    .open-menu:focus:not(:focus-visible),
+    .close-menu:focus:not(:focus-visible){
+        outline: none;
+    }
+}

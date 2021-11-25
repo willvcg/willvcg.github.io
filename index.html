@@ -1,14 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola mundo</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <title>Portafolio Will</title>
 
-    <h1>Hola como estas</h1>
+    <!--Esto es la fuente importada llamada Montserrat
+    La conseguimos en fonts google y copiamos lo que esta en
+    la seccino "link"-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--Esto nos sirve para que el css nos cargue correctamen en
+    todos los navegadores-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+
+    <!--Estos son los estos css personalizados-->
+    <link rel="stylesheet" href="css/main.css ">
+    <link rel="stylesheet" href="css/navbar.css ">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/skills.css">
+
+    <!--Scrip-->
+    <!--Este script lo creamos para poder darle interacción
+    a la barra desplegable del menu en versión responsive.
+    El defer sirve para que el script sea cargado una vez
+    que se ha cargado toda la página.-->
+    <script defer src="js/app.js"></script>
+</head>
+
+<body>
+    <!--Cabecera-->
+    <header class="topheader">
+        <nav class="topnav">
+            <a class="logo" href="#">
+                <img height="50" width="50" alt="Will93" src="img/will.jpg" />
+                <div>
+                    Will 93 <br />
+                    { code }
+                </div>
+            </a>
+            <button class="open-menu" aria-label="Abrir menú">
+                <!--Con el aria-label les decimos a los navegadores para que sirve el botón, con este botón expandiriamos el menu en responsive-->
+                <img src="img/hamburger-icon.svg" alt="abrir menú">
+            </button>
+            <ul class="menu ">
+                <!--Si la clase menu_opened (que esta en js) esta activada el menu esta abierto en responsive y sino estara cerrado el menu-->
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <!--Con el aria-label les decimos a los navegadores para que sirve el botón, con este botón cerrariamos el menu en responsive, y este boton se ponde dentroe del ul.-->
+                    <img src="img/close-icon.svg" alt="cerrar menú">
+                </button>
+                <li><a href="#profile">Perfil</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="profile">
+            <div class="profile-info">
+                <h1 class="profile-title">Hola, soy <br /> Will Cumbicus</h1>
+                <p class="profile-details">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit deleniti hic cupiditate.
+                    Repellendus
+                    deserunt ullam ab natus debitis iusto saepe distinctio quibusdam quos magnam aspernatur assumenda
+                    quam
+                    expedita, culpa fuga!
+                </p>
+                <button class="profile-btn">
+                    Descargar cv
+                </button>
+            </div>
+            <span class="profile-img-section">
+                <img class="profile-img" src="img/will.jpg" / alt="programador">
+                <div class="profile-img-line"></div>
+            </span>
+        </section>
+    </div>
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="skills">
+            <h2 class="skills-title">Habilidades</h2>
+            <ul class="skills-list">
+                <li class="skills-skill">CSS</li>
+                <li class="skills-skill">HTML</li>
+                <li class="skills-skill">Node.js</li>
+                <li class="skills-skill">React.js</li>
+                <li class="skills-skill">TypeScript</li>
+                <li class="skills-skill">JavaScript</li>
+            </ul>
+        </section>
+
+        </div>
 </body>
+
 </html>
