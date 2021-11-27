@@ -34,6 +34,7 @@
 </head>
 
 <body>
+    <div class="observer-root-margin"></div>
     <!--Cabecera-->
     <header class="topheader">
         <nav class="topnav">
@@ -54,7 +55,7 @@
                     <!--Con el aria-label les decimos a los navegadores para que sirve el botón, con este botón cerrariamos el menu en responsive, y este boton se ponde dentroe del ul.-->
                     <img src="img/close-icon.svg" alt="cerrar menú">
                 </button>
-                <li><a href="#profile">Perfil</a></li>
+                <li><a href="#profile" class="selected">Perfil</a></li>
                 <li><a href="#experience">Experiencia</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -63,7 +64,7 @@
     </header>
 
     <div class="horizontal-padding vertical-padding">
-        <section class="profile">
+        <section class="profile" id="profile">
             <div class="profile-info">
                 <h1 class="profile-title">Hola, soy <br /> Will Cumbicus</h1>
                 <p class="profile-details">
@@ -84,7 +85,7 @@
         </section>
     </div>
 
-    <section class="experiences">
+    <section class="experiences" id="experience">
         <img src="img/wave.svg" alt="division" class="wave" />
         <div class="experiences-body">
             <h2 class="experiences-title">Experiencias</h2>
@@ -137,7 +138,7 @@
     </section>
 
     <div class="horizontal-padding vertical-padding">
-        <section class="skills">
+        <section class="skills" id="skills">
             <h2 class="skills-title">Habilidades</h2>
             <ul class="skills-list">
                 <li class="skills-skill">CSS</li>
@@ -148,8 +149,12 @@
                 <li class="skills-skill">JavaScript</li>
             </ul>
         </section>
-
     </div>
+
+    <section class="contact vertical-padding" id="contact">
+        <h2 class="contact-title">Contacto</h2>
+    </section>
+    
 </body>
 
 </html>

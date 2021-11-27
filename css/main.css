@@ -10,6 +10,28 @@ Nos sirve para definir variables en css*/
     --menu-mobile-background-color: #3a4460;
 }
 
+html{
+    scroll-behavior: smooth;        /*Esto nos sirve para que el scrroll al seleccionar un id de mi menu de navegacion, el scroll sea mas suave.*/
+}
+
+section[id]{            /*Esto nos sirve para seleccionar a todos los section que tienen id.*/
+    scroll-margin-top: 70px;        /*sirve para cuando seleccionemos algun id del menu de navegacion, nos de un espacio extra de margen de arriaba de 70px*/
+    /*border: 4px solid red;*/
+}
+/*
+.observer-root-margin{
+    pointer-events: none;
+    z-index: 1000;
+    border: 4px solid blue;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+*/
+
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--theme-color);

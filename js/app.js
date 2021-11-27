@@ -15,3 +15,50 @@ function toggleMenu(){
 el menu y ocultandolo, mediante un click a la imagen correspondiente */
 openMenuBtn.addEventListener("click", toggleMenu); 
 closeMenuBtn.addEventListener("click", toggleMenu);
+
+/* Esta linea dice, selecioname todos los elemntos que esten en la clase menu
+y en una etiqueta <a> con un href, el href se define con todos esos simbolos 
+aqui en JS.  */
+// const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+
+/*Este intesectionObserver va a recibbir una funcion que 
+va a usar una function de flecha, que va a recibir unas entries
+y a estas entries les vamos a hacer un foreach, y por cada entry.
+Mirar el video de Yoelvis Mulen "Conecta enlaces del menu" */
+/*
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const id = entry.target.getAttribute("id");
+        const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
+
+        if(entry.isIntersecting){
+            menuLink.classList.add("selected");
+        }else{
+            menuLink.classList.remove("seleted");
+        }
+    })
+})
+*/
+
+/*Recorremos todos los enlaces "href" y por cada enlace vamos a añadirle
+un eventListener que vamos a escuchar el evento click, y cuando se le haga 
+click alguno de esos botones "href", vamos a ejectuar una funcion, que esta
+funcion lo que va hacer es coger el menu y eliminarlo, en este caso de las clases,
+osea eliminar el "menu_opened". Asi que cada vez que le demos click a alguno de 
+ellos se va a cerrar nuestro menu que sale, ese menu solo sale cuando tenemos la
+clase menu_opened */
+menuLinks.forEach(menuLinks => {
+    menuLinks.addEventListener("click", function(){
+        menu.classList.remove("menu_opened");
+    })
+
+    /*Ultimo video, sin terminar */
+    /*
+    const hash = menuLink.getAttribute("href");
+    const target = document.querySelector(hash);
+    if(target){
+        observer.observe(target);
+    }
+    */
+})
+
