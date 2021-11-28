@@ -19,7 +19,7 @@ closeMenuBtn.addEventListener("click", toggleMenu);
 /* Esta linea dice, selecioname todos los elemntos que esten en la clase menu
 y en una etiqueta <a> con un href, el href se define con todos esos simbolos 
 aqui en JS.  */
-// const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
 
 /*Este intesectionObserver va a recibbir una funcion que 
 va a usar una function de flecha, que va a recibir unas entries
