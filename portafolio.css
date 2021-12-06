@@ -1,0 +1,273 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+#container{
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 12px #ccc;
+    height: auto;
+    min-height: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(214, 198, 198, 0.8);
+}
+
+#header{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid rgba(214, 198, 198, 0.8);
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+    padding-bottom: 20px;
+}
+
+.logo{
+    flex-grow: 1;
+    flex-basis: 65%;
+    padding: 20px;
+    margin-left: 10px;
+    text-shadow: 0px 0px 12px #ccc;
+
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 35px;
+
+}
+
+.logo h1{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+#menu{
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 100%;
+    margin-right: 15px;
+}
+
+#menu ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+#menu a{
+    flex-grow: 1;
+    text-transform: uppercase;
+    color: #444;
+    padding: 15px;
+    font-size: 17px;
+    transition: all 300ms;
+}
+
+#menu a:hover{
+    background: #ccc;
+    color: white;
+}
+
+#content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#projects{
+    flex-basis: 80%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.project{
+    flex-grow: 1;
+    flex-basis: 250px;
+    border: 1px solid rgba(214, 198, 198, 0.8);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+.project a:hover{
+    scale: 2;
+}
+
+.project img{
+    width: 100%;
+}
+
+.project-info{
+    padding: 10px;
+}
+
+.project-info a{
+    color: black;
+    font-size: 16px;
+    transition: all 300ms;
+}
+
+.project-info a:hover{
+    color: green;
+}
+
+.project-info p{
+    font-size: 16px;
+    color: grey;
+}
+
+.img-responsive{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+#aside{
+    flex-basis: 15%;
+    padding: 20px;
+    
+}
+
+#aside h2{
+    font-weight: 100;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(214, 198, 198, 0.8);
+}
+
+#aside ul{
+    list-style: none;
+}
+
+#aside ul li{
+    padding-bottom: 20px;
+}
+
+#aside a{
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+    color: #444;
+    transition: all 300ms;
+}
+
+#aside a:hover{
+    color: white;
+    background: #444;
+}
+
+#footer{
+    border-top: 1px solid rgba(214, 198, 198, 0.8);
+    min-height: 120px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .logo{
+    flex-grow: 1;
+    flex-basis: auto;
+    text-align: right;
+    order: 2;
+}
+
+#footer .info{
+    flex-grow: 1;
+    flex-basis: 60%;
+    order: 1;
+    margin-left: 20px;
+}
+
+@media (max-width: 320px){
+    .logo h1{
+        font-size: 27px;
+    }
+
+    .logo{
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 470px){
+
+    #menu ul{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #menu ul li{
+        padding-bottom: 20px;
+        flex-grow: 1;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 778px){
+
+    #content{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    #aside{
+        padding-top: 0;
+    }
+    
+    #aside ul{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    #aside ul li{
+        flex-grow: 1;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .project{
+        margin-right: 10px;
+        margin-left: 10px;
+        
+    }
+    
+    
+    #footer .logo{
+        order: 1;
+        text-align: center;
+    }
+
+    #footer .info{
+        text-align: center;
+        order: 2;
+    }
+}
+
+@media (max-width: 1285px){
+    #header{
+        text-align: center;
+    }
+
+    #menu ul{
+        align-items:flex-start;
+        justify-content: space-evenly;
+
+    }
+}
