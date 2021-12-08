@@ -59,6 +59,10 @@ del index.html, copiamos el "@import" y lo pegamos en el css.*/
     filter: brightness(130%);
 }
 
+.profile-btn a{
+    color: var(--text-color-inverse);
+}
+
 
 @media (min-width: 950px){
     .profile-info{

@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/experiences.css">
     <link rel="stylesheet" href="css/portafolio.css">
+    <link rel="stylesheet" href="css/contacto.css">
+
 
     <!--Scrip-->
     <!--Este script lo creamos para poder darle interacción
@@ -71,8 +73,7 @@
             <div class="profile-info">
                 <h1 class="profile-title">Hola, soy <br /> Will Cumbicus</h1>
                 <p class="profile-details">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, molestias culpa neque quibusdam
-                    error accusantium.
+                    Recientemente he finalizado mis estudios de Desarrollo de aplicacion web en Ilerna Online. La metodología aplicada en el centro, orientada a la acción y resultados, me ha permitido desarrollar una gran capacidad de resolución.
                 </p>
                 <button class="profile-btn">
                     <a href="CV.pdf">
@@ -210,10 +211,19 @@
         </section>
     </div>
 
-    <section class="contact vertical-padding" id="contact">
-        <h2 class="contact-title">Contacto</h2>
-        <h3>Telefono</h3>
-        <h3>Ubicación</h3>
+    <section class="contact " id="contact">
+        <div class="contacto">
+            <form class="form" action="https://formspree.io/f/xoqrqvyy" method="POST">
+                <div class="form__container">
+                    <h2 class="form__title">Contacto</h2>
+                    <input type="text" class="form__input" placeholder="Nombre" name="name" />
+                    <input type="email" class="form__input" placeholder="Email" name="_replyto" />
+                    <textarea class="form__input form__input--message" placeholder="Mensaje: " name="message"></textarea>
+                    <input type="submit" value="Enviar" class="form_cta" />
+                </div>
+            </form>
+    
+        </div>
     </section>
 
 </body>
