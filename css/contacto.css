@@ -27,7 +27,7 @@
     width: 100%;
     display: grid;
     gap: 1em;
-    grid-auto-columns: 100%;
+    grid-auto-columns: 100%;        /*Las columanas ocupan el 100% del ancho*/
 }
 
 .form__title{
@@ -47,7 +47,7 @@
 }
 
 .form__input--message{
-    resize: none;
+    resize: none;       /*No se puede agrandar la textArea*/
     padding: 1.8em 1em;
     margin-bottom: .5em;
 }
